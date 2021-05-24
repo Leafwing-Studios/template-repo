@@ -2,7 +2,7 @@
 name: Request for Comments
 about: Create a central point for discussion of particularly complex concepts
 title: ''
-labels: I - rfc, S - waiting-on-review
+labels: "I: rfc", "S: needs-triage"
 assignees: ''
 ---
 

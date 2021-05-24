@@ -2,7 +2,7 @@
 name: Performance
 about: Help us make things go fast!
 title: ''
-labels: T - performance, S - needs-triage
+labels: "T: performance", "S: needs-triage"
 assignees: ''
 ---
 

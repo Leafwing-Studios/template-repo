@@ -1,0 +1,15 @@
+[package]
+name = "template-repo"
+description = "A Bevy + mdbook enabled template repo to build on."
+version = "0.0.0"
+authors = ["Leafwing Studios"]
+homepage = "https://github.com/leafwing-studios/template-repo"
+repository = "hhttps://github.com/leafwing-studios/template-repo"
+license-file = "LICENSE-APACHE"
+edition = "2018"
+
+[workspace]
+members = ["./", "tools/ci"]
+
+[dependencies]
+bevy = { version = "0.5" }

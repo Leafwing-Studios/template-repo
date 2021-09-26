@@ -50,10 +50,8 @@ Any contributions made are provided under the license(s) listed in this repo at 
 
 1. Use doc tests aggressively to show how APIs should be used.
 You can use `#` to hide a setup line from the doc tests.
-2. "```rust" formatted code in your book will be [automatically tested](https://rust-lang.github.io/mdBook/cli/test.html).
-Use "```rust,ignore" instead to bypass this.
-3. Unit test belong near the code they are testing. Use `#[cfg(test)]` on the test module to ignore it during builds, and `#[test]` on the test functions to ensure they are run.
-4. Integration tests should be stored in the top level `tests` folder, importing functions from `lib.rs`.
+2. Unit test belong near the code they are testing. Use `#[cfg(test)]` on the test module to ignore it during builds, and `#[test]` on the test functions to ensure they are run.
+3. Integration tests should be stored in the top level `tests` folder, importing functions from `lib.rs`.
 
 Use `cargo test` to run all tests.
 

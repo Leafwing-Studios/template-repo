@@ -12,6 +12,37 @@ Feel free to use, hack and adopt this freely: no attribution needed.
 
 [Use this template](https://github.com/Leafwing-Studios/template-repo/generate) by pressing the big green "Use this template" button in the top right corner of [this repo](https://github.com/Leafwing-Studios/template-repo) to create a new repository.
 
+If you are making a game, your logic should be stored in `lib.rs` (and other files that are pulled in from it).
+Then, add all of the plugins and build your `App` in `main.rs`.
+
+If you are making a standalone library, delete `main.rs` and the `[[bin]]` section of the top-level `Cargo.toml`.
+
+Finally:
+
+1. Rename the lib and bin in `Cargo.toml`.
+2. Double check that the LICENSE matches your intent.
+3. Update this README to match your project, modifying `About`, `Getting Started` and other sections as needed.
+
+### Contributing
+
+This repository is open to community contributions!
+There are a few options if you'd like to help:
+
+1. File issues for bugs you find or new features you'd like.
+2. Read over and discuss issues, then make a PR that fixes them. Use "Fixes #X" in your PR description to automatically close the issue when the PR is merged.
+3. Review existing PRs, and leave thoughtful feedback. If you think a PR is ready to merge, hit "Approve" in your review!
+
+### Testing
+
+1. Use doc tests aggressively to show how APIs should be used.
+You can use `#` to hide a setup line from the doc tests.
+2. "```rust" formatted code in your book will be [automatically tested](https://rust-lang.github.io/mdBook/cli/test.html).
+Use "```rust,ignore" instead to bypass this.
+3. Unit test belong near the code they are testing. Use `#[cfg(test)]` on the test module to ignore it during builds, and `#[test]` on the test functions to run them at the right time. 
+4. Integration tests should be stored in the top level `tests` folder, importing functions from `lib.rs`.
+
+Use `cargo test` to run all tests.
+
 ### Running your game
 
 Use `cargo run --release`.
@@ -27,7 +58,7 @@ The CI will:
 
 Check this locally with:
 
-1. `cargo run ci`
+1. `cargo run -p ci`
 2. `cargo test --workspace`
 
 To manually rerun CI:
@@ -43,7 +74,3 @@ Use `cargo doc --open` to build and then open the docs.
 
 Design docs (or other book-format documentation) is handled with [mdBook](https://rust-lang.github.io/mdBook/index.html).
 Install it with `cargo install mdbook`, then use `mdbook serve --open` to launch the docs.
-
-Note that "```rust" formatted code in your book will be [automatically tested](https://rust-lang.github.io/mdBook/cli/test.html).
-
-Use "```rust,ignore" instead to bypass this.

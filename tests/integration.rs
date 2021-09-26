@@ -1,4 +1,8 @@
+#![cfg(test)]
+
 #[test]
-fn subtraction() {
-    assert_eq!(2 - 2, 0);
+fn always_true() {
+    use template_lib::returns_true;
+
+    assert!(returns_true());
 }

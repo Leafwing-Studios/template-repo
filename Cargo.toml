@@ -13,3 +13,11 @@ members = ["./", "tools/ci"]
 
 [dependencies]
 bevy = { version = "0.5" }
+
+[lib]
+name = "template_lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "template_bin"
+path = "src/main.rs"

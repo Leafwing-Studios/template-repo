@@ -4,6 +4,7 @@ fn main() {
     App::build().add_system(hello_world.system()).run();
 }
 
+/// A system that says hello to the world
 fn hello_world() {
     println!("Hello, world!");
 }

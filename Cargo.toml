@@ -13,6 +13,8 @@ members = ["./", "tools/ci"]
 
 [dependencies]
 bevy = { version = "0.5" }
+[dev-dependencies]
+criterion = "0.3"
 
 [lib]
 name = "template_lib"
@@ -21,3 +23,8 @@ path = "src/lib.rs"
 [[bin]]
 name = "template_bin"
 path = "src/main.rs"
+
+[[bench]]
+name = "entity_spawning"
+path = "benches/entity_spawning.rs"
+harness = false

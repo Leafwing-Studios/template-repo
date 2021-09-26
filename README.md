@@ -30,6 +30,12 @@ Check this locally with:
 1. `cargo run ci`
 2. `cargo test --workspace`
 
+To manually rerun CI:
+
+1. Navigate to the `Actions` tab.
+2. Use the dropdown menu in the CI run of interest and select "View workflow file".
+3. In the top-right corner, select "Rerun workflow".
+
 ### Documentation
 
 Reference documentation is handled with standard Rust doc strings.

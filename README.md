@@ -12,18 +12,30 @@ Feel free to use, hack and adopt this freely: no attribution needed.
 
 [Use this template](https://github.com/Leafwing-Studios/template-repo/generate) by pressing the big green "Use this template" button in the top right corner of [this repo](https://github.com/Leafwing-Studios/template-repo) to create a new repository.
 
-If you are making a game, your logic should be stored in `lib.rs` (and other files that are pulled in from it).
+If you are making a game:
+
+1. Enable the features you need from Bevy in `Cargo.toml`.
+2. Delete the `examples` folder.
+3. Start writing your game. Your logic should be stored in `lib.rs` (and other files that are pulled in from it).
 Then, add all of the plugins and build your `App` in `main.rs`.
 
-If you are making a standalone library, delete `main.rs` and the `[[bin]]` section of the top-level `Cargo.toml`.
+If you are making a standalone library:
+
+1. Delete `main.rs` and the `[[bin]]` section of the top-level `Cargo.toml`.
 
 Finally:
 
-1. Rename the lib and bin in `Cargo.toml`.
+1. Rename the lib and bin in `Cargo.toml` (and all imports to ensure your code compiles).
 2. Double check that the LICENSE matches your intent.
 3. Update this README to match your project, modifying `About`, `Getting Started` and other sections as needed.
 
-### Contributing
+### Running your game
+
+Use `cargo run --release`.
+
+To run examples, use `cargo run --example_name`, with the appropriate name as listed in the `Cargo.toml` file.
+
+## Contributing
 
 This repository is open to community contributions!
 There are a few options if you'd like to help:
@@ -38,14 +50,10 @@ There are a few options if you'd like to help:
 You can use `#` to hide a setup line from the doc tests.
 2. "```rust" formatted code in your book will be [automatically tested](https://rust-lang.github.io/mdBook/cli/test.html).
 Use "```rust,ignore" instead to bypass this.
-3. Unit test belong near the code they are testing. Use `#[cfg(test)]` on the test module to ignore it during builds, and `#[test]` on the test functions to run them at the right time. 
+3. Unit test belong near the code they are testing. Use `#[cfg(test)]` on the test module to ignore it during builds, and `#[test]` on the test functions to ensure they are run.
 4. Integration tests should be stored in the top level `tests` folder, importing functions from `lib.rs`.
 
 Use `cargo test` to run all tests.
-
-### Running your game
-
-Use `cargo run --release`.
 
 ### CI
 

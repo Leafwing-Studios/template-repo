@@ -11,7 +11,7 @@ mod tests {
     use super::returns_true;
 
     #[test]
-    fn my_unit_test() {
+    fn template_unit_test() {
         assert!(returns_true());
     }
 }

@@ -6,16 +6,13 @@ authors = ["Leafwing Studios"]
 homepage = "https://github.com/leafwing-studios/template-repo"
 repository = "hhttps://github.com/leafwing-studios/template-repo"
 license = "MIT + APACHE"
-license-file = "LICENSE-APACHE"
 edition = "2018"
 categories = ["games", "game-development"]
 keywords = ["bevy"]
+exclude = ["assets/**/*", "tools/**/*", "github/**/*"]
 
 [workspace]
 members = ["./", "tools/ci"]
-
-[exclude]
-exclude = ["/assets", "/benches", "/tools", "/.github"]
 
 [dependencies]
 bevy = { version = "0.5", default-features = false}

@@ -33,7 +33,7 @@ Finally:
 
 Use `cargo run --release`.
 
-To run examples, use `cargo run --example_name`, with the appropriate name as listed in the `Cargo.toml` file.
+To run an example, use `cargo run --example_name`, where `example_name` is the file name of the example without the `.rs` extension.
 
 ## Contributing
 

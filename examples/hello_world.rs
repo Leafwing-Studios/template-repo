@@ -1,6 +1,6 @@
 use bevy::prelude::*;
-use template_lib::hello_world;
+use template_lib::HelloWorldPlugin;
 
 fn main() {
-    App::build().add_system(hello_world.system()).run();
+    App::build().add_plugin(HelloWorldPlugin).run();
 }

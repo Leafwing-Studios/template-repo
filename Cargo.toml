@@ -15,7 +15,7 @@ exclude = ["assets/**/*", "tools/**/*", "github/**/*"]
 members = ["./", "tools/ci"]
 
 [dependencies]
-bevy = { version = "0.5", default-features = false}
+bevy = { version = "0.5", default-features = false, features = ["dynamic"]}
 
 [dev-dependencies]
 criterion = "0.3"

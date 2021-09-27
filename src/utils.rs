@@ -4,7 +4,7 @@
 ///
 /// # Examples
 /// ```
-/// # use template_lib::returns_true;
+/// # use template_lib::utils::returns_true;
 /// assert!(returns_true());
 /// ```
 pub fn returns_true() -> bool {
@@ -13,7 +13,7 @@ pub fn returns_true() -> bool {
 
 #[cfg(test)]
 mod tests {
-    use super::returns_true;
+    use super::*;
 
     #[test]
     fn template_unit_test() {

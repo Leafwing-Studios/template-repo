@@ -11,6 +11,9 @@ categories = ["games", "game-development"]
 keywords = ["bevy"]
 exclude = ["assets/**/*", "tools/**/*", "github/**/*"]
 
+[profile.dev]
+opt-level = 3
+
 [workspace]
 members = ["./", "tools/ci"]
 

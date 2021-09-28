@@ -4,9 +4,7 @@ use template_lib::*;
 
 fn main() {
     App::build()
-        // Standard Bevy functionality
-        .add_plugins(DefaultPlugins)
-        // Configure the window settings
+        // Configure the game window
         .insert_resource(WindowDescriptor {
             width: 1920.0,
             height: 1080.0,
@@ -14,6 +12,8 @@ fn main() {
             mode: WindowMode::BorderlessFullscreen,
             ..Default::default()
         })
+        // Standard Bevy functionality
+        .add_plugins(DefaultPlugins)
         // Add plugins here
         .add_plugin(HelloWorldPlugin)
         .run();

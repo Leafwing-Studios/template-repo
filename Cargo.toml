@@ -18,7 +18,7 @@ opt-level = 3
 members = ["./", "tools/ci"]
 
 [dependencies]
-bevy = { version = "0.5", default-features = false, features = ["dynamic"]}
+bevy = { version = "0.5", default-features = true, features = ["dynamic"]}
 
 [dev-dependencies]
 criterion = "0.3"

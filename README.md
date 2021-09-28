@@ -1,7 +1,6 @@
 # About
 
-This is the standard template repository for Leafwing Studios!
-It's intended to provide a quick, opinionated base to build high-quality Bevy game projects (and libraries) with.
+This is the Leafwing Studios' template repo, providing a quick, opinionated base for high-quality Bevy game projects (and libraries).
 We've shaved the yaks for you!
 
 The licenses here are provided for template purposes: this repository itself is provided under MIT-0.
@@ -13,16 +12,22 @@ Feel free to use, hack and adopt this freely: no attribution needed.
 
 [Use this template](https://github.com/Leafwing-Studios/template-repo/generate) by pressing the big green "Use this template" button in the top right corner of [this repo](https://github.com/Leafwing-Studios/template-repo) to create a new repository.
 
+This repository has dynamic linking enabled for much faster incremental compile times.
+If you're on Windows, you'll need to use the `nightly` Rust compiler.
+Swap by using `rustup default nightly`.
+
 If you are making a game:
 
 1. Enable the features you need from Bevy in `Cargo.toml`.
 2. Delete the `examples` folder.
 3. Start writing your game. Your logic should be stored in `lib.rs` (and other files that are pulled in from it).
 Then, add all of the plugins and build your `App` in `main.rs`.
+4. If you only care about your game working on `nightly`, remove `stable` from the `toolchain` field in `.github/workflows/ci.yml`.
 
 If you are making a standalone library:
 
 1. Delete `main.rs` and the `[[bin]]` section of the top-level `Cargo.toml`.
+2. Change `default-features` to `true` for the `bevy` dependency to avoid unnecessarily pulling in extra features for your users.
 
 Finally:
 

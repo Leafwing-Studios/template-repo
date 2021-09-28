@@ -1,7 +1,6 @@
 # About
 
-This is the standard template repository for Leafwing Studios!
-It's intended to provide a quick, opinionated base to build high-quality Bevy game projects (and libraries) with.
+This is the Leafwing Studios' template repo, providing a quick, opinionated base for high-quality Bevy game projects (and libraries).
 We've shaved the yaks for you!
 
 The licenses here are provided for template purposes: this repository itself is provided under MIT-0.

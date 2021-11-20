@@ -6,17 +6,39 @@ One paragraph explanation of the feature.
 
 ## Motivation
 
-Why are we doing this? What use cases does it support?
+Why are we doing this? What use cases does it support, which problems does it solve or what experience does it enable?
 
 ## User-facing explanation
 
-Explain the proposal as if it was already included and you were teaching it to another user. That generally means:
+Explain the proposal as if it was already included and you were teaching it to a user or player. That generally means:
 
 - Introducing new named concepts.
 - Explaining the feature, ideally through simple examples of solutions to concrete problems.
 - Explaining how users should *think* about the feature, and how it should impact the way they use our code or game. It should explain the impact as concretely as possible.
-- If applicable, provide sample error messages, deprecation warnings, or migration guidance.
 - If applicable, explain how this feature compares to similar existing features, and in what situations the user would use each one.
+
+## \[Optional\] Game design analysis
+
+### Choices
+
+- What choices can players make?
+  - What impact will those choices have?
+  - Why would different players choose to make different choices?
+  - Why would the same player choose to make different choices?
+- What are the core tensions present in this design?
+
+### Feedback loops
+
+What feedback loops does this design create or build upon?
+
+### Tuning levers
+
+What values or elements of the design can we trivially change after the feature is built to alter power, feel or complexity?
+
+### Hooks
+
+- How can the rest of the game interact with this system?
+- How can this system interact with the rest of the game?
 
 ## Implementation strategy
 
@@ -38,7 +60,10 @@ When writing this section be mindful of the following:
 
 ## Drawbacks
 
-Why should we *not* do this?
+- Why should we *not* do this?
+- Which technical constraints are we pushing up against?
+- Which design constraints are we pushing up against?
+- Which product area (art, sound, programming, design, narrative etc.) will this feature tax the most?
 
 ## Rationale and alternatives
 
@@ -64,6 +89,9 @@ Note that while precedent set by other engines is some motivation, it does not o
 - What parts of the design do you expect to resolve through the RFC process before this gets merged?
 - What parts of the design do you expect to resolve through the implementation of this feature before the feature PR is merged?
 - What related issues do you consider out of scope for this RFC that could be addressed in the future independently of the solution that comes out of this RFC?
+- Which questions need to be answered through experimentation before we can commit to this feature?
+  - What hypotheses do we have?
+  - What is the simplest, most focused ways we can test each hypothesis?
 
 ## \[Optional\] Future possibilities
 

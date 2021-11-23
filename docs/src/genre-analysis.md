@@ -1,5 +1,9 @@
 # Genre analysis
 
+## Exemplars
+
+## Adjacent games
+
 ## Core Fantasy
 
 ## Nouns
@@ -12,8 +16,8 @@
 
 ## Progression loop
 
+## Tensions
+
 ## Strengths
 
 ## Weaknesses
-
-## Audience overlap

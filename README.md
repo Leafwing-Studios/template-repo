@@ -27,7 +27,7 @@ Then, add all of the plugins and build your `App` in `main.rs`.
 If you are making a standalone library:
 
 1. Delete `main.rs` and the `[[bin]]` section of the top-level `Cargo.toml`.
-2. Change `default-features` to `false` for the `bevy` dependency to avoid unnecessarily pulling in extra features for your users.
+2. Disable `bevy` features: change `default-features` to `false` and disable the `dynamic` feature. This avoids unnecessarily pulling in extra features for your users.
 
 Finally:
 

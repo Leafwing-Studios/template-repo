@@ -27,13 +27,14 @@ Then, add all of the plugins and build your `App` in `main.rs`.
 If you are making a standalone library:
 
 1. Delete `main.rs` and the `[[bin]]` section of the top-level `Cargo.toml`.
-2. Change `default-features` to `true` for the `bevy` dependency to avoid unnecessarily pulling in extra features for your users.
+2. Change `default-features` to `false` for the `bevy` dependency to avoid unnecessarily pulling in extra features for your users.
 
 Finally:
 
 1. Rename the lib and bin in `Cargo.toml` (and all imports to ensure your code compiles).
 2. Double check that the LICENSE matches your intent.
 3. Update this README to match your project, modifying `About`, `Getting Started` and other sections as needed.
+4. Consider cleaning up the issue and PR templates found in the `.github` folder to better match your needs.
 
 ### Running your game
 

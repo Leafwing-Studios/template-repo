@@ -134,3 +134,8 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_MARKDOWN: true
           DEFAULT_BRANCH: main
+
+  doc:
+    run: cargo doc --no-deps
+    env:
+      RUSTDOCFLAGS: -Dwarnings

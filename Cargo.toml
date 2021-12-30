@@ -20,6 +20,13 @@ members = ["./", "tools/ci"]
 [dependencies]
 bevy = { version = "0.5", default-features = true, features = ["dynamic"]}
 
+[patch.crates-io]
+# We can override the bevy version with remote or local versions
+# This method causes less pain to downstream users trying to work off your revisions
+#bevy = { git = "https://github.com/bevyengine/bevy" }
+#bevy = { path = "../bevy" }
+
+
 [dev-dependencies]
 criterion = "0.3"
 

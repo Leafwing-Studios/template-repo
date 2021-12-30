@@ -26,7 +26,6 @@ bevy = { version = "0.5", default-features = true, features = ["dynamic"]}
 #bevy = { git = "https://github.com/bevyengine/bevy" }
 #bevy = { path = "../bevy" }
 
-
 [dev-dependencies]
 criterion = "0.3"
 

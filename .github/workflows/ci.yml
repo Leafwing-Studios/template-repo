@@ -37,6 +37,10 @@ jobs:
         env:
           CARGO_INCREMENTAL: 0
           RUSTFLAGS: "-C debuginfo=0 -D warnings"
+      - name: Ensure docs compile
+        run: cargo doc --no-deps
+        env:
+          RUSTDOCFLAGS: -Dwarnings
 
   ci:
     runs-on: windows-latest
@@ -135,7 +139,3 @@ jobs:
           VALIDATE_MARKDOWN: true
           DEFAULT_BRANCH: main
 
-  doc:
-    run: cargo doc --no-deps
-    env:
-      RUSTDOCFLAGS: -Dwarnings

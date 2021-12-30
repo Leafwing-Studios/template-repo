@@ -47,6 +47,9 @@ To run an example, use `cargo run --example_name`, where `example_name` is the f
 ## Contributing
 
 This repository is open to community contributions!
+*Leafwing Studios* attempts to adhere to the [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/about.html).
+If you haven't seen it before, it's an excellent resource!
+
 There are a few options if you'd like to help:
 
 1. File issues for bugs you find or new features you'd like.

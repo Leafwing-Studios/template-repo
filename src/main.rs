@@ -3,7 +3,7 @@ use bevy::window::WindowMode;
 use template_lib::*;
 
 fn main() {
-    App::build()
+    App::new()
         // Configure the game window
         .insert_resource(WindowDescriptor {
             width: 1920.0,

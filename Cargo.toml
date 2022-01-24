@@ -18,7 +18,7 @@ opt-level = 3
 members = ["./", "tools/ci"]
 
 [dependencies]
-bevy = { version = "0.6", default-features = true, features = ["dynamic"]}
+bevy = { version = "0.6", default-features = false, features = ["dynamic"]}
 
 [patch.crates-io]
 # We can override the bevy version with remote or local versions

@@ -10,6 +10,7 @@ edition = "2021"
 categories = ["games", "game-development"]
 keywords = ["bevy"]
 exclude = ["assets/**/*", "tools/**/*", ".github/**/*"]
+resolver = "2"
 
 [profile.dev]
 opt-level = 3

@@ -1,7 +1,12 @@
+#![forbid(missing_docs)]
+#![warn(clippy::doc_markdown)]
+#![doc = include_str!("../README.md")]
+
 use bevy::prelude::*;
 
 pub mod utils;
 
+/// A plugin
 pub struct HelloWorldPlugin;
 
 impl Plugin for HelloWorldPlugin {

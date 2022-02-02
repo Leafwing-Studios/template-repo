@@ -3,13 +3,21 @@ use xshell::cmd;
 fn main() {
     // When run locally, results may differ from actual CI runs triggered by
     // .github/workflows/ci.yml
-    // - Official CI runs latest stable
-    // - Local runs use whatever the default Rust is locally
 
     // See if any code needs to be formatted
     cmd!("cargo fmt --all -- --check")
         .run()
         .expect("Please run 'cargo fmt --all' to format your code.");
+
+    // Run tests
+    cmd!("cargo test")
+        .run()
+        .expect("Please fix failing tests in output above.");
+
+    // Run doc tests: these are ignored by `cargo test`
+    cmd!("cargo test --doc --workspace")
+        .run()
+        .expect("Please fix failing doc-tests in output above.");
 
     // See if clippy has any complaints.
     // - Type complexity must be ignored because we use huge templates for queries

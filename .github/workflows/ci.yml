@@ -8,36 +8,6 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
-    strategy:
-      matrix:
-        toolchain: [stable, nightly]
-        os: [windows-latest, ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        with:
-          path: |
-            ~/.cargo/bin/
-            ~/.cargo/registry/index/
-            ~/.cargo/registry/cache/
-            ~/.cargo/git/db/
-            target/
-          key: ${{ runner.os }}-cargo-build-${{ matrix.toolchain }}-${{ hashFiles('**/Cargo.toml') }}
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: ${{ matrix.toolchain }}
-          override: true
-      - name: Install alsa and udev
-        run: sudo apt-get update; sudo apt-get install --no-install-recommends libasound2-dev libudev-dev
-        if: runner.os == 'linux'
-      - name: Build & run tests
-        run: cargo test --workspace
-        env:
-          CARGO_INCREMENTAL: 0
-          RUSTFLAGS: "-C debuginfo=0 -D warnings"
-
   ci:
     runs-on: windows-latest
     steps:
@@ -59,6 +29,10 @@ jobs:
       - name: CI job
         # See tools/ci/src/main.rs for the commands this runs
         run: cargo run -p ci
+      - name: Ensure docs compile
+        run: cargo doc --no-deps
+        env:
+          RUSTDOCFLAGS: -Dwarnings
 
   mdbook:
     runs-on: ubuntu-20.04
@@ -134,3 +108,4 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_MARKDOWN: true
           DEFAULT_BRANCH: main
+

@@ -2,7 +2,7 @@
 name: Prototype Required
 about: Propose a prototype or playtest to test hypotheses
 title: ''
-labels: design
+labels:
 assignees: ''
 ---
 

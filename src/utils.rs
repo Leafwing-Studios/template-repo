@@ -1,3 +1,5 @@
+//! A module
+
 /// Returns true!
 ///
 /// A useless function used for testing that CI works.

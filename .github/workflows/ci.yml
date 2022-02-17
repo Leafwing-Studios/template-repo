@@ -134,8 +134,8 @@ jobs:
         run: |
           cargo +nightly build
       - name: Run examples
+        # Examples are automatically ended after 5 seconds
         run: |
           for example_name in example/*.rs; do
-            cargo +nightly run −−example $(basename $example_name .rs)"
-            sleep 3
+            timeout 5 cargo +nightly run −−example $(basename $example_name .rs)"
           done

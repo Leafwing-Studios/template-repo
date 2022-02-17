@@ -132,10 +132,10 @@ jobs:
           toolchain: nightly
       - name: Build project
         run: |
-          cargo build
+          cargo +nightly build
       - name: Run examples
         run: |
           for example_name in example/*.rs; do
-            time CI_TESTING_CONFIG=examplexvfb−run cargo run −−example $(basename $example_name .rs)"
+            cargo +nightly run −−example $(basename $example_name .rs)"
             sleep 3
           done

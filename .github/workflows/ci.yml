@@ -108,29 +108,3 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_MARKDOWN: true
           DEFAULT_BRANCH: main
-
-  run-examples:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        with:
-          path: |
-            ~/.cargo/bin/
-            ~/.cargo/registry/index/
-            ~/.cargo/registry/cache/
-            ~/.cargo/git/db/
-            target/
-          key: ${{ runner.os }}-cargo-ci-${{ hashFiles('**/Cargo.toml') }}
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: nightly
-      - name: Build project
-        run: |
-          cargo +nightly build
-      - name: Run examples
-        # Examples are automatically ended after 5 seconds
-        run: |
-          for example_name in example/*.rs; do
-            timeout 5 cargo +nightly run −−example $(basename $example_name .rs)"
-          done

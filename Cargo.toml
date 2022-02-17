@@ -29,6 +29,9 @@ bevy = { version = "0.6", default-features = false, features = ["dynamic"]}
 
 [dev-dependencies]
 criterion = "0.3"
+# We can use a different feature set of Bevy for our library vs our examples and tests
+bevy = { version = "0.6", default-features = false}
+
 
 [lib]
 name = "template_lib"

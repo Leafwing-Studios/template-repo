@@ -117,12 +117,6 @@ jobs:
           sudo apt-get update;
           DEBIAN_FRONTEND=noninteractive sudo apt-get install --no-install-recommends -yq \
             libasound2-dev libudev-dev;
-      - name: install xvfb, llvmpipe and lavapipe
-        run: |
-          sudo apt-get update -y -qq
-          sudo add-apt-repository ppa:oibaf/graphics-drivers -y
-          sudo apt-get update
-          sudo apt install -y xvfb libegl1-mesa libgl1-mesa-dri libxcb-xfixes0-dev mesa-vulkan-drivers
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
         with:
@@ -138,7 +132,7 @@ jobs:
           toolchain: nightly
       - name: Build project
         run: |
-          cargo +nightly build
+          cargo build
       - name: Run examples
         run: |
           for example_name in example/*.rs; do

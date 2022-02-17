@@ -43,6 +43,12 @@ Dynamic linking is enabled to ensure build times stay snappy.
 
 To run an example, use `cargo run --example_name`, where `example_name` is the file name of the example without the `.rs` extension.
 
+### Publishing your game
+
+A build will be produced for Windows, MacOS and Linux each time a [tag](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-commits/managing-tags) is pushed to GitHub.
+
+These can be found under the [Releases](https://docs.github.com/en/rest/reference/releases) tab of your project.
+
 ## Contributing
 
 This repository is open to community contributions!

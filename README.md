@@ -52,7 +52,7 @@ These can be found under the [Releases](https://docs.github.com/en/rest/referenc
 
 ## Contributing
 
-See [CONTRIBUTING.md]!
+See [CONTRIBUTING.md](https://github.com/Leafwing-Studios/template-repo/blob/main/CONTRIBUTING.md)!
 
 ### Testing
 

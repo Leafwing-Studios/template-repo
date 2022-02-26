@@ -52,14 +52,7 @@ These can be found under the [Releases](https://docs.github.com/en/rest/referenc
 
 ## Contributing
 
-This repository is open to community contributions!
-There are a few options if you'd like to help:
-
-1. File issues for bugs you find or new features you'd like.
-2. Read over and discuss issues, then make a PR that fixes them. Use "Fixes #X" in your PR description to automatically close the issue when the PR is merged.
-3. Review existing PRs, and leave thoughtful feedback. If you think a PR is ready to merge, hit "Approve" in your review!
-
-Any contributions made are provided under the license(s) listed in this repo at the time of their contribution, and do not require separate attribution.
+See [CONTRIBUTING.md]!
 
 ### Testing
 

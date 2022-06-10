@@ -15,7 +15,8 @@ Feel free to use, hack and adopt this freely: no attribution needed.
 This repository has dynamic linking enabled for much faster incremental compile times.
 If you're on Windows, you'll need to use the `nightly` Rust compiler.
 Swap by using `rustup default nightly`.
-
+You may want to run `rustup update` afterwards to get your tools up to date.
+  
 If you are making a game:
 
 1. Enable the features you need from Bevy in `Cargo.toml`.

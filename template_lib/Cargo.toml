@@ -9,13 +9,11 @@ edition = "2021"
 bevy = { git = "https://github.com/bevyengine/bevy", rev="f7fbfaf", default-features = false, features = [
     "bevy_asset",
     "bevy_gilrs",
-    "bevy_gltf", 
-    "bevy_ui", 
-    "bevy_pbr",
     "bevy_render",
+    "bevy_scene",
     "bevy_winit", 
-    "trace_tracy", 
-    "png", 
+    "png",  
+    "trace_tracy",
     "x11",
 ] }
 # bevy_kira_audio ={ git = "https://github.com/NiklasEi/bevy_kira_audio?branch=bevy_main", features = ["mp3"]}

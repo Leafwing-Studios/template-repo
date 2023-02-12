@@ -2,10 +2,10 @@
 
 use bevy::{
     prelude::*,
-    render::{
-        settings::{Backends, WgpuSettings},
-        RenderPlugin,
-    },
+    // render::{
+    //     settings::{Backends, WgpuSettings},
+    //     RenderPlugin,
+    // },
 };
 
 /// Set the game state to align systems with their respective runtimes
@@ -14,7 +14,6 @@ enum GameState {
     #[default]
     Menu,
     Playing,
-    GameOver,
 }
 
 fn main() {
@@ -22,17 +21,13 @@ fn main() {
         DefaultPlugins
             .set(WindowPlugin {
                 primary_window: Some(Window {
-                    title: String::from("3D Bevy Template"),
+                    title: String::from("Bevy 3D Template"),
                     ..default()
                 }),
                 ..default()
             })
-            // Work around for https://github.com/bevyengine/bevy/issues/7620
-            .set(RenderPlugin {
-                wgpu_settings: WgpuSettings {
-                    backends:Some(Backends::PRIMARY),
-                    ..Default::default()
-                },
-            }),
-        ).run();
+        )
+        .add_plugin(template_lib::player::PlayerPlugin)
+        .add_plugin(template_lib::graphics::GraphicsPlugin)
+        .run();
 }

@@ -1,4 +1,4 @@
-use bevy::prelude::Plugin;
+use bevy::prelude::{App, Plugin};
 
 use self::lighting::LightingPlugin;
 

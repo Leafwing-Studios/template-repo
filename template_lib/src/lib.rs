@@ -6,4 +6,5 @@
 // Often exceeded by queries
 #![allow(clippy::type_complexity)]
 
+pub mod graphics;
 pub mod player;

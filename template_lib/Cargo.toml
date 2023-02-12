@@ -15,7 +15,7 @@ bevy = { git = "https://github.com/bevyengine/bevy", rev="f7fbfaf", default-feat
     "bevy_scene",
     "bevy_winit", 
     "png",  
-    "trace_tracy",
+    # "trace_tracy",
     "x11",
 ] }
 # bevy_kira_audio ={ git = "https://github.com/NiklasEi/bevy_kira_audio?branch=bevy_main", features = ["mp3"]}

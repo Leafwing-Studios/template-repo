@@ -1,6 +1,3 @@
-[profile.dev.package."*"]
-opt-level = 3
-
 [workspace]
 resolver = "2"
 
@@ -12,3 +9,7 @@ members = [
 ]
 
 default-members = ["template_game","template_lib"]
+
+# Enable max dependenacy optimizations without impacting release compiles
+[profile.dev.package."*"]
+opt-level = 3

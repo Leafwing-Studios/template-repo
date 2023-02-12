@@ -1,5 +1,4 @@
 #![cfg(test)]
 
 #[test]
-fn minimal_app_can_update() {
-}
+fn minimal_app_can_update() {}

@@ -6,7 +6,7 @@ license = "MIT OR Apache 2.0"
 edition = "2021"
 
 [dependencies]
-bevy = { version = "0.9", git = "https://github.com/bevyengine/bevy?rev=a1e4114", default-features = false, features = [
+bevy = { git = "https://github.com/bevyengine/bevy", rev="f7fbfaf", default-features = false, features = [
     "bevy_asset",
     "bevy_gilrs",
     "bevy_gltf", 
@@ -18,19 +18,9 @@ bevy = { version = "0.9", git = "https://github.com/bevyengine/bevy?rev=a1e4114"
     "png", 
     "x11",
 ] }
-bevy_kira_audio ={ version = "*", git = "https://github.com/NiklasEi/bevy_kira_audio?branch=bevy_main", features = ["mp3"]}
+# bevy_kira_audio ={ git = "https://github.com/NiklasEi/bevy_kira_audio?branch=bevy_main", features = ["mp3"]}
 rand = "0.8"
-template_macros = {version = "0.1", path = "../template_macros"}
+# template_macros = {version = "0.1", path = "../template_macros"}
 petitset = "0.2"
 serde = "1.0.152"
 derive_more = "0.99.17"
-
-[patch."https://github.com/bevyengine/bevy"]
-# We can override the bevy version with remote or local versions
-# This method causes less pain to downstream users trying to work off your revisions
-bevy = { version = "0.9", git = "https://github.com/bevyengine/bevy?rev=a1e4114" }
-
-
-[dev-dependencies]
-# We can use a different feature set of Bevy for our library vs our examples and tests
-bevy = { version = "0.9", git = "https://github.com/bevyengine/bevy?rev=a1e4114", default-features = false}

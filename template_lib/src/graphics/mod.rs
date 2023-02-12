@@ -1,3 +1,4 @@
+//! Logic for starting the graphics pipeline
 use bevy::prelude::{App, Plugin};
 
 use self::lighting::LightingPlugin;

@@ -1,4 +1,4 @@
-//! Provides plugins needed by the TEMPLATE game.
+//! Connects all of the TEMPLATE game logic.
 #![deny(missing_docs)]
 #![deny(clippy::missing_docs_in_private_items)]
 #![forbid(unsafe_code)]
@@ -8,3 +8,4 @@
 
 pub mod graphics;
 pub mod player;
+

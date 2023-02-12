@@ -8,7 +8,9 @@ edition = "2021"
 [dependencies]
 bevy = { git = "https://github.com/bevyengine/bevy", rev="f7fbfaf", default-features = false, features = [
     "bevy_asset",
+    "bevy_core_pipeline",
     "bevy_gilrs",
+    "bevy_pbr",
     "bevy_render",
     "bevy_scene",
     "bevy_winit", 

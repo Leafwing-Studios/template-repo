@@ -1,0 +1,10 @@
+[package]
+name = "template_game"
+version = "0.1.0"
+license = "MIT OR Apache-2.0"
+authors = ["Leafwing Studios"]
+edition = "2021"
+
+[dependencies]
+bevy = { git = "https://github.com/bevyengine/bevy", rev="f7fbfaf", default-features = false}
+template_lib ={ path = "../template_lib", version = "0.1"}

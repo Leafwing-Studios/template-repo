@@ -11,6 +11,7 @@ enum GameState {
     Playing,
 }
 
+/// All game plugins go here to run as a cohesive game. 
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins.set(WindowPlugin {
@@ -20,7 +21,7 @@ fn main() {
             }),
             ..default()
         }))
-        .add_plugin(template_lib::player::PlayerPlugin)
-        .add_plugin(template_lib::graphics::GraphicsPlugin)
+        .add_plugin(template_lib::player::PlayerPlugin) // ToDo: name change
+        .add_plugin(template_lib::graphics::GraphicsPlugin) // ToDo: name change
         .run();
 }

@@ -1,6 +1,7 @@
 [workspace]
 resolver = "2"
 
+# ToDo: Change `template` to `your_game_name` here, below, and in the respective folders' `Cargo.toml`.
 members = [
     "template_game", 
     "template_lib", 
@@ -10,6 +11,6 @@ members = [
 
 default-members = ["template_game","template_lib"]
 
-# Enable max dependenacy optimizations without impacting release compiles
+# Enable max dependency optimizations without impacting release compiles
 [profile.dev.package."*"]
 opt-level = 3

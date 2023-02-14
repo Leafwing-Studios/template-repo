@@ -1,6 +1,6 @@
 # About
 
-This is the Leafwing Studios' template repo, providing a quick, opinionated base for high-quality Bevy game projects (and libraries).
+This is the Leafwing Studios' template repo, providing a quick, opinionated base for high-quality Bevy game projects (library template coming soon!).
 We've shaved the yaks for you!
 
 The licenses here are provided for template purposes: this repository itself is provided under MIT-0.
@@ -12,38 +12,31 @@ Feel free to use, hack and adopt this freely: no attribution needed.
 
 [Use this template](https://github.com/Leafwing-Studios/template-repo/generate) by pressing the big green "Use this template" button in the top right corner of [this repo](https://github.com/Leafwing-Studios/template-repo) to create a new repository.
 
-This repository has dynamic linking enabled for much faster incremental compile times.
-If you're on Windows, you'll need to use the `nightly` Rust compiler.
-Swap by using `rustup default nightly`.
+This repository uses a nightly toolchain and has fast compiles enabled through the [`/.cargo/config.toml`](./.cargo/config.toml) for much faster incremental compile times. This repository also uses the [beta crates.io indexing protocol](https://blog.rust-lang.org/inside-rust/2023/01/30/cargo-sparse-protocol.html). 
+Swap from nightly to stable by changing the [`rust-toolchain`](./rust-toolchain.toml) from `"nightly"` to `"stable"` and comment out the `"-Zshare-generics=y/n` statements of [`/.cargo/config.toml](./.cargo/config.toml). 
+
 You may want to run `rustup update` afterwards to get your tools up to date.
-  
-If you are making a game:
 
-1. Enable the features you need from Bevy in `Cargo.toml`.
-2. Delete the `examples` folder.
-3. Start writing your game. Your logic should be stored in `lib.rs` (and other files that are pulled in from it).
-Then, add all of the plugins and build your `App` in `main.rs`.
-4. If you only care about your game working on `nightly`, remove `stable` from the `toolchain` field in `.github/workflows/ci.yml`.
+1. Search for `ToDo:` comments to find where you need to change the project name from `template_...` to `your_game_name_...`. 
 
-If you are making a standalone library:
+2. Set your dependency's features in [`Cargo.toml`](./template_lib/Cargo.toml) of the game library. If you need features that only your game `main.rs` or other logics you add to [`template_game/src`](./template_game/src/) will use, you will need to change the features on dependencies in [`Cargo.toml`](./template_game/Cargo.toml) from `template_game`.
 
-1. Delete `main.rs` and the `[[bin]]` section of the top-level `Cargo.toml`.
-2. Disable `bevy` features: change `default-features` to `false` and disable the `dynamic` feature. This avoids unnecessarily pulling in extra features for your users.
+3. Start writing your game. Your logic should be stored in [`template_lib/src/lib.rs`](./template_lib/src/lib.rs) or in files and folders in [`template_lib/src`](./template_lib/src/) that act as [modules](https://doc.rust-lang.org/reference/items/modules.html).
 
-Finally:
+- Then, add all of your plugins and build your `App` in [`main.rs`](./template_game/src/main.rs).
 
-1. Rename the lib and bin in `Cargo.toml` (and all imports to ensure your code compiles).
-2. Double check that the LICENSE matches your intent.
-3. Update this README to match your project, modifying `About`, `Getting Started` and other sections as needed.
-4. Consider cleaning up the issue and PR templates found in the `.github` folder to better match your needs.
+4. Double check that the LICENSE matches your intent, edit it if it doesn't.
+
+5. Update this README to match your project, modifying any sections as needed.
+
+6. Consider cleaning up the issue and PR templates found in the `.github` folder to better match your needs.
+
+7. Make sure all of your documentation is properly organized and filled out. 
 
 ### Running your game
 
-Use `cargo run`.
-This repo is set up to always build with full optimizations, so there's no need for a `--release` flag in most cases.
-Dynamic linking is enabled to ensure build times stay snappy.
-
-To run an example, use `cargo run --example_name`, where `example_name` is the file name of the example without the `.rs` extension.
+Use `cargo run` to run in debug mode or use `cargo run --release` to test the release build.
+This repo is set up to always build with full optimizations, so there's no need for a `--release` flag in most cases where you aren't testing a release.
 
 ### Publishing your game
 
@@ -78,7 +71,7 @@ Check this locally with:
 1. `cargo run -p ci`
 2. `cargo test --workspace`
 
-To manually rerun CI:
+To manually rerun CI on Github:
 
 1. Navigate to the `Actions` tab.
 2. Use the dropdown menu in the CI run of interest and select "View workflow file".
@@ -92,7 +85,7 @@ Use `cargo doc --open` to build and then open the docs.
 Design docs (or other book-format documentation) is handled with [mdBook](https://rust-lang.github.io/mdBook/index.html).
 Install it with `cargo install mdbook`, then use `mdbook serve --open` to launch the docs.
 
-### Benchmarking
+### Benchmarking (ToDo)
 
 To run the benchmarks, use `cargo bench`.
 

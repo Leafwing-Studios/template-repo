@@ -1,11 +1,13 @@
 # Enables the beta rust 1.68 crates index protocol testing. 
-# This should offer crates indexing/compile/build time improvements  
+# This should offer crates indexing/compile/build time improvements. 
 # See https://blog.rust-lang.org/inside-rust/2023/01/30/cargo-sparse-protocol.html for info 
+# Comment this out to switch to stable if before rust 1.68.
+
 [registries.crates.io]
 protocol = "sparse"
 
 # NOTE: For maximum performance, build using a nightly compiler and uncomment `"-Zshare-generics=y",` 
-# If you are using rust stable, remove the "-Zshare-generics=y" below.
+# If you want to use rust stable, remove the "-Zshare-generics=y" below.
 
 [target.x86_64-unknown-linux-gnu]
 linker = "clang"

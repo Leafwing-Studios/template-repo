@@ -1,12 +1,13 @@
 [package]
-name = "template_lib"
+name = "template_lib" # TODO: change to `your_game_name_lib`
 version = "0.1.0"
 authors = ["Leafwing Studios"]
 license = "MIT OR Apache 2.0"
 edition = "2021"
 
 [dependencies]
-bevy = { git = "https://github.com/bevyengine/bevy", rev="f7fbfaf", default-features = false, features = [
+bevy = { git = "https://github.com/bevyengine/bevy", rev="fae61ad", default-features = false, features = [
+    "dynamic_linking",
     "bevy_asset",
     "bevy_core_pipeline",
     "bevy_gilrs",
@@ -15,7 +16,7 @@ bevy = { git = "https://github.com/bevyengine/bevy", rev="f7fbfaf", default-feat
     "bevy_scene",
     "bevy_winit", 
     "png",  
-    # "trace_tracy",
+    # "trace_tracy", # ToDo: check for tracing functionality soon  
     "x11",
 ] }
 # bevy_kira_audio ={ git = "https://github.com/NiklasEi/bevy_kira_audio?branch=bevy_main", features = ["mp3"]}

@@ -11,7 +11,7 @@ enum GameState {
     Playing,
 }
 
-/// All game plugins go here to run as a cohesive game. 
+/// All game plugins go here to run as a cohesive game.
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins.set(WindowPlugin {

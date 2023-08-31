@@ -12,7 +12,7 @@ pub struct GraphicsPlugin;
 
 impl Plugin for GraphicsPlugin {
     fn build(&self, app: &mut App) {
-        app.add_plugin(LightingPlugin);
+        app.add_plugins(LightingPlugin);
     }
 }
 

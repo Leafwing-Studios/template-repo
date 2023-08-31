@@ -19,7 +19,7 @@ fn main() {
             }),
             ..default()
         }))
-        .add_plugin(template_lib::player::PlayerPlugin)
-        .add_plugin(template_lib::graphics::GraphicsPlugin)
+        .add_plugins(template_lib::player::PlayerPlugin)
+        .add_plugins(template_lib::graphics::GraphicsPlugin)
         .run();
 }

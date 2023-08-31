@@ -12,7 +12,7 @@ impl Plugin for LightingPlugin {
             brightness: 1.,
             color: Color::WHITE,
         })
-        .add_startup_system(spawn_sun);
+        .add_systems(Startup, spawn_sun);
     }
 }
 

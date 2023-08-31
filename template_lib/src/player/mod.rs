@@ -8,6 +8,6 @@ pub struct PlayerPlugin;
 
 impl Plugin for PlayerPlugin {
     fn build(&self, app: &mut App) {
-        app.add_plugin(camera::CameraPlugin);
+        app.add_plugins(camera::CameraPlugin);
     }
 }
